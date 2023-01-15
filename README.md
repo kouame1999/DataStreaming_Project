@@ -2,7 +2,7 @@
 
 the link to the slide: https://www.overleaf.com/5531729263nsgvjjmztmwm
 
-This project was made by Jean Pachebat, Tom Reppelin and Angie Méndez-Llanos in the framework of the course Data Stream Processing from the M2 Data Science master's at the Institut Polytechnique.
+This project was made by Pierre LOVITON, Yao Pacome KOUAME and Angie Méndez-Llanos in the framework of the course Data Stream Processing from the M2 Data Science master's at the Institut Polytechnique.
 
 The goal is to use online learning models to predict the future value of a given cryptocurrencies using Kafka to process the data. The models were compared to a similar batch version.
 
