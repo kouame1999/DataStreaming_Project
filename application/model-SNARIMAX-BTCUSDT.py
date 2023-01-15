@@ -88,11 +88,11 @@ for message in consumer:
 
     for h, n_iter in lst_h_niter:
         m, m2, list_ypred = evaluate_SNARIMAX(model, h, Y_t, n_iter)
-        output = {'model': 'linear',
+        output = {'model': 'SNARIMAX',
                    'yt': Y_t,
                    'y_pred': y_pred,
                    'm': m,
                    'm2': m2
                   }
-        producer.send('model-linear-BTCUSDT', output)
-        print("Sending message {} to topic: {}".format(output, 'model-linear-BTCUSDT'))
+        producer.send('model-SNARIMAX-BTCUSDT', output)
+        print("Sending message {} to topic: {}".format(output, 'model-SNARIMAX-BTCUSDT'))

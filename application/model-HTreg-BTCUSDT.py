@@ -108,7 +108,7 @@ for grace_period in grace_periods:
                 # Get the predicted and actual values
                 y, y_pred, m, m2 = evaluate(stream=iter_pandas(X=X, y=y),
                                   model=model)
-                output = {'model': 'linear',
+                output = {'model': 'HTreg',
                           'grace_period' : grace_period,
                           'model_selector_decay': model_selector_decay,
                            'y': y,
@@ -116,5 +116,5 @@ for grace_period in grace_periods:
                            'm': m,
                            'm2': m2
                           }
-                producer.send('model-linear-BTCUSDT', output)
-                print("Sending message {} to topic: {}".format(output, 'model-linear-BTCUSDT'))
+                producer.send('model-HTreg-BTCUSDT', output)
+                print("Sending message {} to topic: {}".format(output, 'model-HTreg-BTCUSDT'))
