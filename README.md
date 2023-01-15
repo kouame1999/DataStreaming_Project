@@ -14,7 +14,7 @@ The python libraries "kafka-python" and "river" must be installed in order to ex
 
 The goal of the application is to create a data flow, using Kafka, to retrieve stock data in real time and then use an online learning model to predict the future value of a cryptocurrency. The sripts should be executed in the following order:
 
-#### 1. Retrieving the data <*ingest-data-BTCUSDT.py*>
+#### 1. Retrieve the data <*ingest-data-BTCUSDT.py*>
 
 The script makes a request to the Binance API (https://binance-docs.github.io/apidocs/spot/en/#introduction) and a producer sends the data to a Kafka topic. 
 In our example, the data is sent to  **BTCUSDT-1m-raw**.
