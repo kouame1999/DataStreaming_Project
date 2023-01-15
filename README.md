@@ -8,6 +8,8 @@ The objective is to use online learning models to predict the future value of a 
 
 An analysis of the batch and online models along with some visualizations can be found in batch_models.ipynb and online_models.ipynb, respectively. 
 
+The python libraries "kafka-python" and "river" must be installed in order to execute the code.
+
 ## Application
 
 The goal of the application is to create a data flow, using Kafka, to retrieve stock data in real time and then use an online learning model to predict the future value of a cryptocurrency. The sripts should be executed in the following order:
