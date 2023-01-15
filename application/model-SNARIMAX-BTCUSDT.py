@@ -90,7 +90,7 @@ for message in consumer:
         m, m2, list_ypred = evaluate_SNARIMAX(model, h, Y_t, n_iter)
         output = {'model': 'SNARIMAX',
                    'yt': Y_t,
-                   'y_pred': y_pred,
+                   'y_pred': list_ypred,
                    'm': m,
                    'm2': m2
                   }
