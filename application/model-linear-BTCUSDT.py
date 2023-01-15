@@ -86,19 +86,20 @@ for message in consumer:
     res = json.loads(json.dumps(message.value))
     df = pd.DataFrame(res)
     df = df.set_index('open_time')
-    # Get the 'close' column as the target variable
-    y = df[i:100+i].close
-    # Get the rest of the columns as the feature variables
-    X = df[i:100+i].drop(columns = 'close')
+    for i in range(250):
+        # Get the 'close' column as the target variable
+        y = df[i:100+i].close
+        # Get the rest of the columns as the feature variables
+        X = df[i:100+i].drop(columns = 'close')
 
-    # Get the predicted and actual values
-    y, y_pred, m, m2 = evaluate(stream=iter_pandas(X=X, y=y),
-                      model=model)
-    output = {'model': 'linear',
-           'y': y,
-           'y_pred': y_pred,
-           'm': m,
-           'm2': m2
-          }
-    producer.send('model-linear-BTCUSDT', output)
-    print("Sending message {} to topic: {}".format(output, 'model-linear-BTCUSDT'))
+        # Get the predicted and actual values
+        y, y_pred, m, m2 = evaluate(stream=iter_pandas(X=X, y=y),
+                          model=model)
+        output = {'model': 'linear',
+               'y': y,
+               'y_pred': y_pred,
+               'm': m,
+               'm2': m2
+              }
+        producer.send('model-linear-BTCUSDT', output)
+        print("Sending message {} to topic: {}".format(output, 'model-linear-BTCUSDT'))
