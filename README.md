@@ -2,7 +2,7 @@
 
 This project was made by Yao Pacome Kouame, Pierre Loviton and Angie Méndez-Llanos in the framework of the course Data Stream Processing from the M2 Data Science master's at the Institut Polytechnique.
 
-The objective is to use online learning models to predict the future value of a given cryptocurrencies using Kafka to process the data. The models were compared to a similar batch version.
+The objective is to use online learning models to predict the future value of a given cryptocurrency using Kafka to process the data. The results of the models were compared to a similar batch version.
 
 An analysis of the batch and online models along with some visualizations can be found in batch_models.ipynb and online_models.ipynb, respectively. 
 
@@ -10,7 +10,7 @@ The python libraries "kafka-python" and "river" must be installed in order to ex
 
 ## Application
 
-The goal of the application is to create a data flow, using Kafka, to retrieve stock data in real time and then use an online learning model to predict the future value of a cryptocurrency. The sripts should be executed in the following order:
+The goal of the application is to create a data flow, using Kafka, to retrieve stock data in real time and then use an online learning model to predict the future value of a cryptocurrency. The scripts should be executed in the following order:
 
 #### 1. Retrieve the data <*ingest-data-BTCUSDT.py*>
 
